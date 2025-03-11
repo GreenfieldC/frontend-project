@@ -5,11 +5,18 @@
 /tmp
 /out-tsc
 /bazel-out
+.angular/cache/
+.angular/local/
 
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+yarn-debug.log
+pnpm-debug.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # IDEs and editors
 .idea/
@@ -40,3 +47,22 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+lost+found/
+
+# Environment Variables & API Keys
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env.*
+
+# Git-specific Files
+.git/
+.gitignore
+.gitkeep
+.gitattributes
