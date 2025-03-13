@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidemenu.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>RezeptFinder</span>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button (click)="toggleDarkMode()">
+    <mat-icon>{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+  </button>
+</mat-toolbar>
