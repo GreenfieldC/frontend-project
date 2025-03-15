@@ -1,6 +1,10 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button (click)="toggleSidemenu.emit()">
-    <mat-icon>menu</mat-icon>
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="toggleSidemenu.emit()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>RezeptFinder</span>
 

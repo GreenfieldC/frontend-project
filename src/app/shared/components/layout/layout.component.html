@@ -1,5 +1,5 @@
-<app-header (toggleSidemenu)="sidemenuOpened = !sidemenuOpened"></app-header>
-<app-sidemenu [opened]="sidemenuOpened"></app-sidemenu>
+<app-header (toggleSidemenu)="toggleSidemenu()"></app-header>
+<app-sidemenu ></app-sidemenu>
 <main>
   <router-outlet></router-outlet>
 </main>

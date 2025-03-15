@@ -8,7 +8,7 @@ import {LayoutComponent} from './shared/components/layout/layout.component';
   templateUrl: './app.component.html',
   imports: [
     RouterOutlet,
-    LayoutComponent
+    LayoutComponent,
   ],
   styleUrl: './app.component.scss'
 })

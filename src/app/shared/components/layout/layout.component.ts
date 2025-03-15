@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {HeaderComponent} from '../header/header.component';
 import {SidemenuComponent} from '../sidemenu/sidemenu.component';
 import {RouterOutlet} from '@angular/router';
@@ -16,5 +16,11 @@ import {FooterComponent} from '../footer/footer.component';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
-  sidemenuOpened = false;
+  @ViewChild(SidemenuComponent) sidemenu!: SidemenuComponent;
+
+  toggleSidemenu() {
+    if (this.sidemenu) {
+      this.sidemenu.toggle();
+    }
+  }
 }
