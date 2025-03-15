@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatIconButton} from '@angular/material/button';
@@ -20,5 +20,9 @@ export class HeaderComponent {
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-theme', this.isDarkMode);
+  }
+
+  toggle() {
+    this.toggleSidemenu.emit();  // Emit event instead of accessing sidenav directly
   }
 }
