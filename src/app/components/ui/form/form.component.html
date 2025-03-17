@@ -1,0 +1,64 @@
+<div *ngIf="recipe">
+  <mat-card-header>
+    <mat-card-title>{{ recipe.title }}</mat-card-title>
+    <mat-card-subtitle
+      >Für {{ recipe.personsNumber }} Personen</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-content class="recipe-card">
+    <div>
+      <h3>Zutaten</h3>
+      <div *ngFor="let ingredient of recipe.ingredients">
+        <mat-form-field appearance="fill">
+          <mat-label
+            >{{ ingredient.amount }} {{ ingredient.unit }}
+            {{ ingredient.name }}</mat-label
+          >
+          <input
+            matInput
+            [value]="
+              ingredient.amount + ' ' + ingredient.unit + ' ' + ingredient.name
+            "
+            readonly
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <h3>Schritte</h3>
+      <div *ngFor="let step of recipe.steps; let i = index">
+        <mat-form-field appearance="fill">
+          <mat-label>Schritt {{ i + 1 }}</mat-label>
+          <textarea matInput [value]="step" readonly></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <h3>Kategorie</h3>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Kategorie</mat-label>
+          <input matInput [value]="recipe.category.join(', ')" readonly />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <h3>Diät-Typ</h3>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Diät-Typ</mat-label>
+          <input matInput [value]="recipe.dietType" readonly />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <h3>Zubereitungszeit</h3>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Zubereitungszeit (Minuten)</mat-label>
+          <input matInput [value]="recipe.preparationTime" readonly />
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-card-content>
+</div>
