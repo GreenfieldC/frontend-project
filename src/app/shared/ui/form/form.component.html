@@ -1,13 +1,13 @@
 <div *ngIf="recipe">
   <mat-card-header>
-    <mat-card-title>{{ recipe.title }}</mat-card-title>
-    <mat-card-subtitle
+    <mat-card-title style="color: #ffffff">{{ recipe.title }}</mat-card-title>
+    <mat-card-subtitle style="color: #ffffff"
       >Für {{ recipe.personsNumber }} Personen</mat-card-subtitle
     >
   </mat-card-header>
   <mat-card-content class="recipe-card">
     <div>
-      <h3>Zutaten</h3>
+      <h3 style="color: #ffffff">Zutaten</h3>
       <div *ngFor="let ingredient of recipe.ingredients">
         <mat-form-field appearance="fill">
           <mat-label
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div>
-      <h3>Schritte</h3>
+      <h3 style="color: #ffffff">Schritte</h3>
       <div *ngFor="let step of recipe.steps; let i = index">
         <mat-form-field appearance="fill">
           <mat-label>Schritt {{ i + 1 }}</mat-label>
@@ -34,16 +34,16 @@
       </div>
     </div>
     <div>
-      <h3>Kategorie</h3>
+      <h3 style="color: #ffffff">Kategorie</h3>
       <div>
         <mat-form-field appearance="fill">
-          <mat-label>Kategorie</mat-label>
+          <mat-label style="color: #ffffff">Kategorie</mat-label>
           <input matInput [value]="recipe.category.join(', ')" readonly />
         </mat-form-field>
       </div>
     </div>
     <div>
-      <h3>Diät-Typ</h3>
+      <h3 style="color: #ffffff">Diät-Typ</h3>
       <div>
         <mat-form-field appearance="fill">
           <mat-label>Diät-Typ</mat-label>
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div>
-      <h3>Zubereitungszeit</h3>
+      <h3 style="color: #ffffff">Zubereitungszeit</h3>
       <div>
         <mat-form-field appearance="fill">
           <mat-label>Zubereitungszeit (Minuten)</mat-label>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,17 +23,8 @@ import { recipes } from '../../../shared/models/recipes';
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
-export class FormComponent implements OnInit {
-  recipe: Recipe | undefined;
-  recipeList: Recipe[] = [];
+export class FormComponent {
+  @Input() recipe: Recipe | undefined;
 
   constructor() {}
-
-  ngOnInit(): void {
-    this.loadRecipe(1);
-  }
-
-  loadRecipe(recipeId: number): void {
-    this.recipe = recipes.find((r) => r.recipeId === recipeId);
-  }
 }
