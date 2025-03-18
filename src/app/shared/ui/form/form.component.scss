@@ -32,6 +32,15 @@
     resize: none;
     overflow: hidden; 
   }
+
+  textarea[matInput],
+input[matInput] {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
   
   @media (max-width: 900px) {
     .recipe-card {

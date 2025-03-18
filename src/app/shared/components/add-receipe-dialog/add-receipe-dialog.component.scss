@@ -24,3 +24,9 @@ button {
   align-self: flex-center;
   margin: 16px;
 }
+
+@media (max-width: 600px) {
+  .card-container {
+    width: 100%;
+  }
+}
