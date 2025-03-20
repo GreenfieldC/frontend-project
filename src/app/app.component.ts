@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './shared/components/layout/layout.component';
-import { AddReceipeDialogComponent } from './shared/components/add-receipe-dialog/add-receipe-dialog.component';
 
 @Component({
   selector: 'app-root',

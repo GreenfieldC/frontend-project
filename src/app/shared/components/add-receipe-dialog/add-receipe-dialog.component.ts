@@ -14,28 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormComponent } from '../../ui/form/form.component';
 import { Recipe } from '../../models/recipe.models';
 import { recipes } from '../../models/recipes';
-
-/* @Component({
-  selector: 'add-receipe-dialog',
-  templateUrl: './add-receipe-dialog.component.html',
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    FormComponent,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-})
-export class DialogElements extends AddReceipeDialogComponent {
-  readonly dialog = inject(MatDialog);
-
-  openDialog() {
-    this.dialog.open(AddReceipeDialogComponent);
-  }
-} */
+import { SaveRecipeService } from '../../../services/saverecipe.service';
 
 @Component({
   selector: 'app-add-receipe-dialog',
@@ -59,6 +38,8 @@ export class AddReceipeDialogComponent implements OnInit {
   recipeList: Recipe[] = [];
   dialog = inject(MatDialog);
 
+  constructor(private recipeService: SaveRecipeService) {}
+
   ngOnInit(): void {
     this.loadRecipe(1);
   }
@@ -68,7 +49,14 @@ export class AddReceipeDialogComponent implements OnInit {
   }
 
   addRecipe(recipe: Recipe): void {
-    localStorage.setItem('recipe', JSON.stringify(recipe));
+    this.recipeService.saveRecipe(recipe).subscribe(
+      (response) => {
+        alert(response.message);
+      },
+      (error) => {
+        alert(error.error.message);
+      }
+    );
     this.dialog.closeAll();
   }
 }

@@ -2,11 +2,11 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
-import {MatListItem, MatNavList} from '@angular/material/list';
+import { MatListItem, MatNavList } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
-import {AsyncPipe} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-sidemenu',
@@ -20,7 +20,7 @@ import {AsyncPipe} from '@angular/common';
     RouterLink,
     MatSidenav,
   ],
-  styleUrls: ['./sidemenu.component.css']
+  /* styleUrls: ['./sidemenu.component.css'], */
 })
 export class SidemenuComponent {
   @Input() opened = false;
@@ -29,9 +29,10 @@ export class SidemenuComponent {
   @ViewChild('drawer') drawer!: MatSidenav;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.isHandset$ = this.breakpointObserver.observe([Breakpoints.Handset])
+    this.isHandset$ = this.breakpointObserver
+      .observe([Breakpoints.Handset])
       .pipe(
-        map(result => result.matches),
+        map((result) => result.matches),
         shareReplay()
       );
   }

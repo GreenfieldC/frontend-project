@@ -1,17 +1,13 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {MatToolbar} from '@angular/material/toolbar';
-import {MatIcon} from '@angular/material/icon';
-import {MatIconButton} from '@angular/material/button';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [
-    MatToolbar,
-    MatIcon,
-    MatIconButton
-  ],
-  styleUrls: ['./header.component.css']
+  imports: [MatToolbar, MatIcon, MatIconButton],
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   @Output() toggleSidemenu = new EventEmitter<void>();
@@ -23,6 +19,6 @@ export class HeaderComponent {
   }
 
   toggle() {
-    this.toggleSidemenu.emit();  // Emit event instead of accessing sidenav directly
+    this.toggleSidemenu.emit(); // Emit event instead of accessing sidenav directly
   }
 }

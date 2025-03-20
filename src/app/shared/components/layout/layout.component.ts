@@ -5,12 +5,14 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AddReceipeDialogComponent } from '../add-receipe-dialog/add-receipe-dialog.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   imports: [HeaderComponent, SidemenuComponent, RouterOutlet, FooterComponent],
-  styleUrls: ['./layout.component.css'],
+  providers: [HttpClientModule],
+  /* styleUrls: ['./layout.component.css'], */
 })
 export class LayoutComponent {
   @ViewChild(SidemenuComponent) sidemenu!: SidemenuComponent;

@@ -66,3 +66,6 @@ lost+found/
 .gitignore
 .gitkeep
 .gitattributes
+
+# backend
+backend/node_modules
