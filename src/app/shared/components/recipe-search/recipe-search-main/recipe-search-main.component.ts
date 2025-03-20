@@ -29,6 +29,7 @@ export class RecipeSearchComponent implements OnInit {
   public recipes: Recipe[] = recipes;
   public form: FormGroup = new FormGroup({});
   public dietTypes: DietType[] = Object.values(DietType);
+  ingredients: string[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -37,6 +38,8 @@ export class RecipeSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    this.getAllIngredientNames();
+    this.setAllIngredients();
     this.filterRecipesOnFormChange();
     this.patchFormValue();
   }
@@ -44,18 +47,34 @@ export class RecipeSearchComponent implements OnInit {
   private initForm(): void {
     this.form = this.fb.group({
       dietTypes: [''],
+      ingredients: [''],
     });
   }
+
+  //#region Filter According to Diet Types
 
   private filterRecipesOnFormChange(): void {
     this.form.valueChanges.subscribe((value) => {
       this.recipes = recipes.filter((recipe) => {
         this.localStorageService.saveSelectedDietTypes(value.dietTypes);
 
-        if (!value.dietTypes || value.dietTypes.length === 0) {
-          return true;
-        }
-        return value.dietTypes.includes(recipe.dietType);
+        const noDietTypeSelected = !value.dietTypes || value.dietTypes.length === 0;
+        const noIngredientSelected = !value.ingredients || value.ingredients.length === 0;
+
+       const matchesDietType =
+         noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
+
+         const matchesIngredients =
+           noIngredientSelected ||
+           recipe.ingredients.some((ingredient) =>
+             value.ingredients.some((inputIngredient:string) =>
+               ingredient.name
+                 .toLowerCase()
+                 .startsWith(inputIngredient.toLowerCase())
+             )
+           );
+
+       return matchesDietType && matchesIngredients;
       });
     });
   }
@@ -63,5 +82,30 @@ export class RecipeSearchComponent implements OnInit {
   private patchFormValue(): void {
     const savedDietTypes = this.localStorageService.loadSelectedDietTypes();
     this.form.patchValue({ dietTypes: savedDietTypes });
+  }
+
+  //#region Filter According to Ingredients
+
+  cleanIngredientName(name: string): string {
+    name = name.replace(/\(.*?\)/g, ''); // Entferne (Inhalt in Klammern)
+    name = name.split(',')[0];
+    return name.trim();
+  }
+
+  private getAllIngredientNames(): string[] {
+    return [
+      ...new Set(
+        recipes.flatMap((recipe) =>
+          recipe.ingredients.map((ingredient) =>
+            this.cleanIngredientName(ingredient.name)
+          )
+        )
+      ),
+    ];
+  }
+
+  private setAllIngredients(): void {
+    this.ingredients = this.getAllIngredientNames();
+    console.log(this.ingredients);
   }
 }
