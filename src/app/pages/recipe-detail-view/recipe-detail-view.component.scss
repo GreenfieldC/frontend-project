@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px;
+}
+
+button {
+  width: 250px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  overflow-y: auto;
+  align-items: center;
+  img {
+    max-width: 650px;
+    max-height: 550px;
+    object-fit: cover;
+  }
+
+  .recipe-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
