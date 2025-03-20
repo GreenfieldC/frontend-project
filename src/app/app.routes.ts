@@ -1,15 +1,20 @@
 import { Routes } from '@angular/router';
-import { LayoutComponent } from './shared/components/layout/layout.component';
-import { RecipesComponent } from './shared/pages/recipes/recipes.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RecipeDetailViewComponent } from './pages/recipe-detail-view/recipe-detail-view.component';
+import { RecipesOverviewComponent } from './pages/recipes-overview/recipes-overview.component';
 
 export const routes: Routes = [
   {
-      path: '',
-      component: LayoutComponent,
-      children: [
-        // { path: '', component: LandingPageComponent }
-       { path: 'recipes', component: RecipesComponent },
-      //  { path: 'favorites', component: FavoritesComponent }
-      ]
-    }
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent,
+  },
+  {
+    path: 'recipes',
+    component: RecipesOverviewComponent,
+  },
+  {
+    path: 'recipes/:id',
+    component: RecipeDetailViewComponent,
+  },
 ];
