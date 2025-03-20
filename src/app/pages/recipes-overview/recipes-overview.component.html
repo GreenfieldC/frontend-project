@@ -2,7 +2,7 @@
 <div class="card-container">
     <ng-container *ngFor="let recipe of allRecipes">
         <div class="recipe-card" (click)="onSelectRecipe(recipe.recipeId)">
-            <img [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/placeholder-image.jpg'"
+            <img [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
                 alt="Bild {{recipe.title}}" />
             <div class="recipe-info">
                 <h3>{{ recipe.title }}</h3>
