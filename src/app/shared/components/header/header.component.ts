@@ -6,8 +6,12 @@ import { MatIconButton } from '@angular/material/button';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [MatToolbar, MatIcon, MatIconButton],
   styleUrls: ['./header.component.scss'],
+  imports: [
+    MatToolbar,
+    MatIcon,
+    MatIconButton
+  ],
 })
 export class HeaderComponent {
   @Output() toggleSidemenu = new EventEmitter<void>();

@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AddReceipeDialogComponent } from '../add-receipe-dialog/add-receipe-dialog.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-layout',
@@ -17,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 export class LayoutComponent {
   @ViewChild(SidemenuComponent) sidemenu!: SidemenuComponent;
   constructor(private dialog: MatDialog) {}
+
   toggleSidemenu() {
     if (this.sidemenu) {
       this.sidemenu.toggle();
