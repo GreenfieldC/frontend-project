@@ -1,0 +1,18 @@
+<div class="recipe-container" *ngIf="recipe">
+    <img [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
+        alt="Bild {{recipe.title}}" />
+    <div class="recipe-info">
+        <h1>{{ recipe.title }}</h1>
+        <p>Zubereitungszeit: {{ recipe.preparationTime }} Minuten</p>
+        <p>Zutaten:</p>
+        <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">
+                {{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.name }}</li>
+        </ul>
+        <p>Zubereitung:</p>
+        <ol>
+            <li *ngFor="let step of recipe.steps">{{step}}</li>
+        </ol>
+
+    </div>
+</div>

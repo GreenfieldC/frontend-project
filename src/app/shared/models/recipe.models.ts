@@ -3,10 +3,11 @@ export interface Recipe {
   ingredients: Ingredient[];
   personsNumber: number;
   steps: string[];
-  recipeId?: number; // for routing
+  recipeId: number; // for routing
   category: RecipeCategory[]; // several categories possible
   dietType: DietType;
   preparationTime: number; // in minutes
+  imageUrl?: string;
 }
 
 export interface Ingredient {
@@ -22,7 +23,7 @@ export enum RecipeCategory {
   Dessert = 'Nachspeise',
   Snack = 'Snack',
   Beverage = 'Getränk',
-  Other = 'Sonstiges'
+  Other = 'Sonstiges',
 }
 
 export enum DietType {

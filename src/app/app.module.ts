@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
@@ -24,6 +22,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [HttpClientModule],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
 export class AppModule {}

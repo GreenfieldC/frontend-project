@@ -1,4 +1,4 @@
-import { DietType, Recipe, RecipeCategory } from "./recipe.models";
+import { DietType, Recipe, RecipeCategory } from './recipe.models';
 
 export const recipes: Recipe[] = [
   {
@@ -23,6 +23,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Omnivore,
     preparationTime: 30,
+    imageUrl: 'assets/images/spaghetti-with-bolognese.jpg',
   },
   {
     title: 'Rührei mit Speck',
@@ -44,6 +45,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Breakfast],
     dietType: DietType.Omnivore,
     preparationTime: 10,
+    imageUrl: 'assets/images/scrambled-egg.jpg',
   },
   {
     title: 'Gemüse-Lasagne',
@@ -68,6 +70,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Vegetarian,
     preparationTime: 45,
+    imageUrl: 'assets/images/vegetarian-lasagna.jpg',
   },
   {
     title: 'Avocado-Toast',
@@ -89,6 +92,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Breakfast, RecipeCategory.Snack],
     dietType: DietType.Vegetarian,
     preparationTime: 10,
+    imageUrl: 'assets/images/avocado-toast.jpg',
   },
   {
     title: 'Veganer Burger',
@@ -111,6 +115,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Vegan,
     preparationTime: 20,
+    imageUrl: 'assets/images/veggie-hamburger.jpg',
   },
   {
     title: 'Overnight Oats',
@@ -131,6 +136,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Breakfast],
     dietType: DietType.Vegan,
     preparationTime: 5,
+    imageUrl: 'assets/images/blueberries-oats.jpg',
   },
   {
     title: 'Gegrillter Lachs mit Quinoa',
@@ -152,6 +158,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.GlutenFree,
     preparationTime: 25,
+    imageUrl: 'assets/images/salmon-quinoa.png',
   },
   {
     title: 'Früchte-Smoothie',
@@ -171,6 +178,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Beverage],
     dietType: DietType.GlutenFree,
     preparationTime: 5,
+    imageUrl: 'assets/images/smoothie.jpg',
   },
   {
     title: 'Hähnchen mit Kokosmilch-Curry',
@@ -192,6 +200,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.DairyFree,
     preparationTime: 25,
+    imageUrl: 'assets/images/chicken-curry.jpg',
   },
   {
     title: 'Frucht-Sorbet',
@@ -210,6 +219,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Dessert],
     dietType: DietType.DairyFree,
     preparationTime: 10,
+    imageUrl: 'assets/images/sorbet.jpg',
   },
   {
     title: 'Steak mit Kartoffeln',
@@ -230,6 +240,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.NutFree,
     preparationTime: 25,
+    imageUrl: 'assets/images/beef-with-potatos.jpg',
   },
   {
     title: 'Tomaten-Gurken-Salat',
@@ -251,6 +262,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.SideDish],
     dietType: DietType.NutFree,
     preparationTime: 10,
+    imageUrl: 'assets/images/tomato-salad.jpg',
   },
   {
     title: 'Zoodles mit Pesto',
@@ -271,6 +283,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Paleo,
     preparationTime: 15,
+    imageUrl: 'assets/images/zoodles.webp',
   },
   {
     title: 'Obstsalat',
@@ -290,6 +303,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Dessert],
     dietType: DietType.Paleo,
     preparationTime: 10,
+    imageUrl: 'assets/images/fruit-salad.jpg',
   },
   {
     title: 'Keto-Hähnchen-Auflauf',
@@ -311,6 +325,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Keto,
     preparationTime: 30,
+    imageUrl: 'assets/images/chicken-casserole.jpg',
   },
   {
     title: 'Gurkenboote mit Thunfisch',
@@ -331,6 +346,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Snack],
     dietType: DietType.Keto,
     preparationTime: 10,
+    imageUrl: 'assets/images/cucumber-tuna.webp',
   },
   {
     title: 'Hähnchen-Kabsa (Halal)',
@@ -353,6 +369,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Halal,
     preparationTime: 40,
+    imageUrl: 'assets/images/chicken-kabsa.webp',
   },
   {
     title: 'Shakshuka (Halal)',
@@ -376,6 +393,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Halal,
     preparationTime: 20,
+    imageUrl: 'assets/images/shakshuka.jpg',
   },
   {
     title: 'Gefilte Fisch (Koscher)',
@@ -397,6 +415,7 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.MainCourse],
     dietType: DietType.Kosher,
     preparationTime: 30,
+    imageUrl: 'assets/images/gefilte-fisch.jpg',
   },
   {
     title: 'Bagels mit Lachs und Frischkäse (Koscher)',
@@ -418,5 +437,6 @@ export const recipes: Recipe[] = [
     category: [RecipeCategory.Breakfast],
     dietType: DietType.Kosher,
     preparationTime: 10,
+    imageUrl: 'assets/images/breakfast-bagel.jpg',
   },
 ];

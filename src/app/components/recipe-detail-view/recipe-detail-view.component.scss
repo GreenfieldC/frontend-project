@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+  overflow-y: auto;
+  img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .recipe-info {
+  }
+}
