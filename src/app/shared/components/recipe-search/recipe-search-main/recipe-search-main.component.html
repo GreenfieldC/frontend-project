@@ -1,25 +1,24 @@
 <form [formGroup]="form">
-  <h1>Finde Deine Rezepte, die zu Dir passen</h1>
   <section>
-    <h2>Filter</h2>
-    <mat-form-field>
-      <mat-label>Diät</mat-label>
-      <mat-select formControlName="dietTypes" multiple>
-        @for (dietType of dietTypes; track dietType) {
-        <mat-option [value]="dietType">{{dietType}}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-  </section>
-  <section>
-    <h2>Suchergebnisse</h2>
-    <!-- @for (recipe of recipes; track recipe) {
-    <app-recipe-search-card [recipe]="recipe"></app-recipe-search-card>
-    } -->
-    <div class="recipe-card-container">
-    @for (recipe of recipes; track recipe) {
-    <app-recipe-search-card [recipe]="recipe"></app-recipe-search-card>
-    }
+    <!-- According to Diat Type -->
+    <div class="input-wrapper">
+      <mat-form-field>
+        <mat-label>Diät</mat-label>
+        <mat-select formControlName="dietTypes" multiple>
+          @for (dietType of dietTypes; track dietType) {
+          <mat-option [value]="dietType">{{dietType}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <!-- According to Ingrediens -->
+      <mat-form-field>
+        <mat-label>Zutaten</mat-label>
+        <mat-select formControlName="ingredients" multiple>
+          @for (ingredient of ingredients; track ingredient) {
+          <mat-option [value]="ingredient">{{ingredient}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
     </div>
   </section>
 </form>
