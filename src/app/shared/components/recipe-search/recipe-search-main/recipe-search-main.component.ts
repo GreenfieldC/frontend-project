@@ -112,6 +112,5 @@ export class RecipeSearchComponent implements OnInit {
 
   private setAllIngredients(): void {
     this.ingredients = this.getAllIngredientNames();
-    console.log(this.ingredients);
   }
 }

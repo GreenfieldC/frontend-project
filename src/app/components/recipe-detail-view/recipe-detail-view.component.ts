@@ -20,6 +20,5 @@ export class RecipeDetailViewComponent {
     this.recipe = this.recipeService.getRecipeById(
       this.route.snapshot.params['id']
     );
-    console.log(this.recipe);
   }
 }

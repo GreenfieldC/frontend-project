@@ -16,7 +16,6 @@ export class RecipesOverviewComponent {
   constructor(private recipeService: RecipeService, private router: Router) {}
   ngOnInit() {
     this.allRecipes = this.recipeService.getAllRecipes();
-    console.log(this.allRecipes);
   }
 
   onSelectRecipe(id: number) {
