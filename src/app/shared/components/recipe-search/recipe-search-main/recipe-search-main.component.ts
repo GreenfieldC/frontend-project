@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -20,13 +20,17 @@ import { LocalStorageService } from '../../../services/local-storage.service';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    RecipeSearchCardComponent,
   ],
   templateUrl: './recipe-search-main.component.html',
   styleUrl: './recipe-search-main.component.scss',
 })
 export class RecipeSearchComponent implements OnInit {
-  public recipes: Recipe[] = recipes;
+  @Input({ required: true })
+  public recipes: Recipe[] = [];
+
+  @Output()
+  filteredRecipes = new EventEmitter<Recipe[]>();
+
   public form: FormGroup = new FormGroup({});
   public dietTypes: DietType[] = Object.values(DietType);
   ingredients: string[] = [];
@@ -76,6 +80,8 @@ export class RecipeSearchComponent implements OnInit {
 
        return matchesDietType && matchesIngredients;
       });
+
+      this.filteredRecipes.emit(this.recipes);
     });
   }
 
@@ -106,6 +112,5 @@ export class RecipeSearchComponent implements OnInit {
 
   private setAllIngredients(): void {
     this.ingredients = this.getAllIngredientNames();
-    console.log(this.ingredients);
   }
 }
