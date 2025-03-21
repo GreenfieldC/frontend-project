@@ -3,10 +3,11 @@ import { CommonModule, NgFor } from '@angular/common';
 import { Recipe } from '../../shared/models/recipe.models';
 import { Router } from '@angular/router';
 import { RecipeService } from '../../services/recipe.service';
+import { RecipeSearchComponent } from '../../shared/components/recipe-search/recipe-search-main/recipe-search-main.component';
 
 @Component({
   selector: 'app-recipes-overview',
-  imports: [NgFor, CommonModule],
+  imports: [NgFor, CommonModule, RecipeSearchComponent],
   templateUrl: './recipes-overview.component.html',
   styleUrl: './recipes-overview.component.scss',
 })
@@ -20,5 +21,9 @@ export class RecipesOverviewComponent {
 
   onSelectRecipe(id: number) {
     this.router.navigate(['/recipes', id]);
+  }
+
+  setFilteredRecipes(filteredRecipes: Recipe[]) {
+    this.allRecipes = filteredRecipes;
   }
 }

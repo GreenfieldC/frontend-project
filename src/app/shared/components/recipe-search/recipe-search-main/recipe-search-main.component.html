@@ -1,7 +1,5 @@
 <form [formGroup]="form">
-  <h1>Finde Deine Rezepte, die zu Dir passen</h1>
   <section>
-    <h2>Filter</h2>
     <!-- According to Diat Type -->
     <div class="input-wrapper">
       <mat-form-field>
@@ -21,17 +19,6 @@
           }
         </mat-select>
       </mat-form-field>
-    </div>
-  </section>
-  <section>
-    <h2>Suchergebnisse</h2>
-    <!-- @for (recipe of recipes; track recipe) {
-    <app-recipe-search-card [recipe]="recipe"></app-recipe-search-card>
-    } -->
-    <div class="recipe-card-container">
-      @for (recipe of recipes; track recipe) {
-      <app-recipe-search-card [recipe]="recipe"></app-recipe-search-card>
-      }
     </div>
   </section>
 </form>
