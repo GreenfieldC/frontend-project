@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "title": "Avocado-Toast",
+    "ingredients": [
+      {
+        "amount": 2,
+        "unit": "Scheiben",
+        "name": "Vollkornbrot"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Avocado"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Tomate (optional)"
+      }
+    ],
+    "personsNumber": 2,
+    "steps": [
+      "Toast oder Brot rösten.",
+      "Avocado zerdrücken und mit Salz und Pfeffer würzen.",
+      "Avocadocreme auf das getoastete Brot streichen.",
+      "Optional Tomatenscheiben darauflegen und sofort servieren."
+    ],
+    "recipeId": 4,
+    "category": [
+      "Frühstück",
+      "Snack"
+    ],
+    "dietType": "Vegetarisch",
+    "preparationTime": 10,
+    "imageUrl": "assets/images/avocado-toast.jpg"
+  },
+  {
+    "title": "Gegrillter Lachs mit Quinoa",
+    "ingredients": [
+      {
+        "amount": 2,
+        "unit": "Filets",
+        "name": "Lachs"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Quinoa"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zitrone"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
+    ],
+    "personsNumber": 2,
+    "steps": [
+      "Quinoa nach Packungsanleitung kochen.",
+      "Lachsfilets salzen, pfeffern und mit Zitronensaft beträufeln.",
+      "Lachs in einer Pfanne oder auf dem Grill garen.",
+      "Servieren: Lachs mit Quinoa anrichten."
+    ],
+    "recipeId": 7,
+    "category": [
+      "Hauptgericht"
+    ],
+    "dietType": "Glutenfrei",
+    "preparationTime": 25,
+    "imageUrl": "assets/images/salmon-quinoa.png"
+  }
+]

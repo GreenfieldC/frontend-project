@@ -54,7 +54,9 @@ app.post("/save-favorite", (req, res) => {
       favRecipes = JSON.parse(data);
     }
 
-    const favouriteExists = favRecipes.find((r) => r.id === favourite.id);
+    const favouriteExists = favRecipes.find(
+      (r) => r.recipeId === favourite.recipeId
+    );
     if (favouriteExists) {
       return res.status(400).json({ message: "Recipe already exists" });
     }
@@ -66,9 +68,10 @@ app.post("/save-favorite", (req, res) => {
         return res.status(500).json({ message: "Error writing file" });
       }
 
-      res
-        .status(200)
-        .json({ message: "Favourite saved successfully", id: favourite.id });
+      res.status(200).json({
+        message: "Favourite saved successfully",
+        id: favourite.recipeId,
+      });
     });
   });
 });
