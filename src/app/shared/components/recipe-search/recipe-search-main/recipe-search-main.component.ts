@@ -1,4 +1,11 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+  ChangeDetectorRef,
+} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -11,7 +18,8 @@ import { RecipeSearchCardComponent } from '../recipe-search-card/recipe-search-c
 import { Recipe, DietType } from '../../../models/recipe.models';
 import { recipes } from '../../../models/recipes';
 import { LocalStorageService } from '../../../services/local-storage.service';
-
+import { Router } from '@angular/router';
+import { FavoriteService } from '../../../../services/favorite.service';
 
 @Component({
   selector: 'app-recipe-search',
@@ -37,7 +45,10 @@ export class RecipeSearchComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private router: Router,
+    private favoriteService: FavoriteService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -55,33 +66,63 @@ export class RecipeSearchComponent implements OnInit {
     });
   }
 
+  private loadRecipesBasedOnPath(): void {
+    const currentPath = this.router.url;
+    if (currentPath.includes('/recipes')) {
+      this.recipes = recipes;
+      this.filteredRecipes.emit(this.recipes);
+      this.cdr.detectChanges();
+    } else if (currentPath.includes('/favorites')) {
+      this.favoriteService.getFavorites().subscribe((data) => {
+        this.recipes = data;
+        this.filteredRecipes.emit(this.recipes);
+        this.cdr.detectChanges();
+      });
+    }
+  }
+
   //#region Filter According to Diet Types
 
   private filterRecipesOnFormChange(): void {
     this.form.valueChanges.subscribe((value) => {
-      this.recipes = recipes.filter((recipe) => {
-        this.localStorageService.saveSelectedDietTypes(value.dietTypes);
+      const currentPath = this.router.url;
+      let sourceRecipes = this.recipes;
 
-        const noDietTypeSelected = !value.dietTypes || value.dietTypes.length === 0;
-        const noIngredientSelected = !value.ingredients || value.ingredients.length === 0;
+      if (currentPath.includes('/favorites')) {
+        sourceRecipes = this.recipes;
+      } else if (currentPath.includes('/recipes')) {
+        sourceRecipes = recipes;
+      }
 
-       const matchesDietType =
-         noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
+      const noDietTypeSelected =
+        !value.dietTypes || value.dietTypes.length === 0;
+      const noIngredientSelected =
+        !value.ingredients || value.ingredients.length === 0;
 
-         const matchesIngredients =
-           noIngredientSelected ||
-           recipe.ingredients.some((ingredient) =>
-             value.ingredients.some((inputIngredient:string) =>
-               ingredient.name
-                 .toLowerCase()
-                 .startsWith(inputIngredient.toLowerCase())
-             )
-           );
+      if (noDietTypeSelected && noIngredientSelected) {
+        this.loadRecipesBasedOnPath();
+      } else {
+        this.recipes = sourceRecipes.filter((recipe) => {
+          this.localStorageService.saveSelectedDietTypes(value.dietTypes);
 
-       return matchesDietType && matchesIngredients;
-      });
+          const matchesDietType =
+            noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
+          const matchesIngredients =
+            noIngredientSelected ||
+            recipe.ingredients.some((ingredient) =>
+              value.ingredients.some((inputIngredient: string) =>
+                ingredient.name
+                  .toLowerCase()
+                  .startsWith(inputIngredient.toLowerCase())
+              )
+            );
 
-      this.filteredRecipes.emit(this.recipes);
+          return matchesDietType && matchesIngredients;
+        });
+
+        this.filteredRecipes.emit(this.recipes);
+        this.cdr.detectChanges();
+      }
     });
   }
 
