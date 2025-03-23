@@ -20,7 +20,7 @@ import { AsyncPipe } from '@angular/common';
     RouterLink,
     MatSidenav,
   ],
-  styleUrls: ['./sidemenu.component.css']
+  /* styleUrls: ['./sidemenu.component.css'] */
 })
 export class SidemenuComponent {
   @Input() opened = false;
@@ -32,7 +32,7 @@ export class SidemenuComponent {
     this.isHandset$ = this.breakpointObserver
       .observe([Breakpoints.Handset])
       .pipe(
-        map(result => result.matches),
+        map((result) => result.matches),
         shareReplay()
       );
   }

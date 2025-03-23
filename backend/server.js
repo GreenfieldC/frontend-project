@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
@@ -7,7 +6,7 @@ const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 app.post("/save-recipe", (req, res) => {
@@ -41,8 +40,72 @@ app.post("/save-recipe", (req, res) => {
   });
 });
 
-app.get("/getfavourites", (req, res) => {
-  const filePath = path.join(__dirname, "data", "recipes.json");
+app.post("/save-favorite", (req, res) => {
+  const favourite = req.body;
+  const filePath = path.join(__dirname, "data", "favorites.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      return res.status(500).json({ message: "Error reading file" });
+    }
+
+    let favRecipes = [];
+    if (data) {
+      favRecipes = JSON.parse(data);
+    }
+
+    const favouriteExists = favRecipes.find((r) => r.id === favourite.id);
+    if (favouriteExists) {
+      return res.status(400).json({ message: "Recipe already exists" });
+    }
+
+    favRecipes.push(favourite);
+
+    fs.writeFile(filePath, JSON.stringify(favRecipes, null, 2), (err) => {
+      if (err) {
+        return res.status(500).json({ message: "Error writing file" });
+      }
+
+      res
+        .status(200)
+        .json({ message: "Favourite saved successfully", id: favourite.id });
+    });
+  });
+});
+
+app.delete("/delete-favorite/:id", (req, res) => {
+  const recipeId = parseInt(req.params.id);
+
+  const filePath = path.join(__dirname, "data", "favorites.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      return res.status(500).json({ message: "Error reading file" });
+    }
+
+    let favRecipes = [];
+    if (data) {
+      favRecipes = JSON.parse(data);
+    }
+    const initialLength = favRecipes.length;
+    favRecipes = favRecipes.filter((r) => r.recipeId !== recipeId);
+
+    if (favRecipes.length === initialLength) {
+      return res.status(404).json({ message: "Favorite not found." });
+    }
+
+    fs.writeFile(filePath, JSON.stringify(favRecipes, null, 2), (err) => {
+      if (err) {
+        return res.status(500).json({ message: "Error writing file" });
+      }
+
+      res.status(200).json({ message: "Favourite deleted successfully" });
+    });
+  });
+});
+
+app.get("/favorites", (req, res) => {
+  const filePath = path.join(__dirname, "data", "favorites.json");
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {

@@ -16,15 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class LayoutComponent {
   @ViewChild(SidemenuComponent) sidemenu!: SidemenuComponent;
-  constructor(private dialog: MatDialog) {}
+  constructor() {}
 
   toggleSidemenu() {
     if (this.sidemenu) {
       this.sidemenu.toggle();
     }
-  }
-
-  openDialog() {
-    this.dialog.open(AddReceipeDialogComponent);
   }
 }
