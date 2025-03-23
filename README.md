@@ -1,10 +1,10 @@
 # Team Schlüsselrollen
+
 Product Owner: Fabio
 
 Scrum Master: Christian
 
 Tech Lead: Toma
-
 
 # Frontend
 
@@ -65,3 +65,31 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Cloning the Project and Starting the Backend
+
+To clone the project and start the backend, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/username/repository.git
+   cd repository
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the backend:
+
+   ```bash
+   cd backend
+   ```
+
+4. Start the development server:
+   ```bash
+   node server.js
+   ```
