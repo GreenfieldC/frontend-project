@@ -1,4 +1,4 @@
-<button mat-flat-button (click)="onBackClick()">zurück</button>
+<button mat-flat-button (click)="goBack()">zurück</button>
 <div class="recipe-container" *ngIf="recipe">
     <img [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
         alt="Bild {{recipe.title}}" />

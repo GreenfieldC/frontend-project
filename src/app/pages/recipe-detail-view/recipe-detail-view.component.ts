@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Recipe } from '../../shared/models/recipe.models';
 import { NgFor, NgIf } from '@angular/common';
 import { RecipeService } from '../../services/recipe.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-receipe-detail-view',
@@ -16,14 +17,14 @@ export class RecipeDetailViewComponent {
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService,
-    private router: Router
+    private location: Location // Add Location service
   ) {
     this.recipe = this.recipeService.getRecipeById(
       this.route.snapshot.params['id']
     );
   }
 
-  onBackClick() {
-    this.router.navigate(['recipes']);
+  goBack(): void {
+    this.location.back();
   }
 }
