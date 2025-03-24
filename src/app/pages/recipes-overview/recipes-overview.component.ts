@@ -1,15 +1,22 @@
+import { MatButtonModule } from '@angular/material/button';
 import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { Recipe } from '../../shared/models/recipe.models';
 import { Router } from '@angular/router';
 import { RecipeService } from '../../services/recipe.service';
 import { RecipeSearchComponent } from '../../shared/components/recipe-search/recipe-search-main/recipe-search-main.component';
-import { MatIcon } from '@angular/material/icon';
 import { FavoriteService } from '../../services/favorite.service';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-recipes-overview',
-  imports: [NgFor, CommonModule, RecipeSearchComponent, MatIcon],
+  imports: [
+    NgFor,
+    CommonModule,
+    RecipeSearchComponent,
+    MatCardModule,
+    MatButtonModule,
+  ],
   templateUrl: './recipes-overview.component.html',
   styleUrl: './recipes-overview.component.scss',
 })

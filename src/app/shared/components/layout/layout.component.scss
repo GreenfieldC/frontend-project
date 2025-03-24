@@ -1,0 +1,7 @@
+main {
+  display: flex;
+  flex-direction: column;
+  /* margin: 30px; */
+  overflow-y: auto;
+  height: calc(100% - 128px);
+}

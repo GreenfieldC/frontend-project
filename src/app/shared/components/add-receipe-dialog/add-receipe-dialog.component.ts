@@ -11,7 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { FormComponent } from '../../ui/form/form.component';
+import { FormComponent } from '../form/form.component';
 import { Recipe } from '../../models/recipe.models';
 import { recipes } from '../../models/recipes';
 import { SaveRecipeService } from '../../../services/saverecipe.service';

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DietType } from '../models/recipe.models';
+import { DietType } from '../shared/models/recipe.models';
 
 @Injectable({
   providedIn: 'root',

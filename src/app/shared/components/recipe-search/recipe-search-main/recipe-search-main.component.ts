@@ -17,7 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { RecipeSearchCardComponent } from '../recipe-search-card/recipe-search-card.component';
 import { Recipe, DietType } from '../../../models/recipe.models';
 import { recipes } from '../../../models/recipes';
-import { LocalStorageService } from '../../../services/local-storage.service';
+import { LocalStorageService } from '../../../../services/local-storage.service';
 import { Router } from '@angular/router';
 import { FavoriteService } from '../../../../services/favorite.service';
 
@@ -103,8 +103,6 @@ export class RecipeSearchComponent implements OnInit {
         this.loadRecipesBasedOnPath();
       } else {
         this.recipes = sourceRecipes.filter((recipe) => {
-
-
           const matchesDietType =
             noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
           const matchesIngredients =
@@ -123,7 +121,7 @@ export class RecipeSearchComponent implements OnInit {
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       }
-      
+
       this.localStorageService.saveSelectedDietTypes(value.dietTypes);
     });
   }
