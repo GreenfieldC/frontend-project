@@ -103,7 +103,7 @@ export class RecipeSearchComponent implements OnInit {
         this.loadRecipesBasedOnPath();
       } else {
         this.recipes = sourceRecipes.filter((recipe) => {
-          this.localStorageService.saveSelectedDietTypes(value.dietTypes);
+
 
           const matchesDietType =
             noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
@@ -123,6 +123,8 @@ export class RecipeSearchComponent implements OnInit {
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       }
+      
+      this.localStorageService.saveSelectedDietTypes(value.dietTypes);
     });
   }
 
