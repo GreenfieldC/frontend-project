@@ -1,0 +1,73 @@
+/* Container-Zentrierung und Grundlayout */
+.landing-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Hauptüberschrift */
+.app-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Untertitel/Intro */
+.app-header p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+/* Bereich: Rezepte entdecken */
+.recipes h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.recipes p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* CTA-Button */
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #ff4343;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2252ff;
+}
+
+/* Responsive Optimierung */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .recipes h2 {
+    font-size: 1.6rem;
+  }
+
+  .app-header p,
+  .recipes p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
