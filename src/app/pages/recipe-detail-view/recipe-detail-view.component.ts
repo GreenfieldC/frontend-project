@@ -19,9 +19,9 @@ export class RecipeDetailViewComponent {
     private recipeService: RecipeService,
     private location: Location // Add Location service
   ) {
-    this.recipe = this.recipeService.getRecipeById(
-      this.route.snapshot.params['id']
-    );
+    this.recipeService
+      .getRecipeById(this.route.snapshot.params['id'])
+      .subscribe((recipe: Recipe) => (this.recipe = recipe));
   }
 
   goBack(): void {

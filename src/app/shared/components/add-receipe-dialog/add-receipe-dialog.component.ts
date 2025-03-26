@@ -13,7 +13,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormComponent } from '../../ui/form/form.component';
 import { Recipe } from '../../models/recipe.models';
-import { recipes } from '../../models/recipes';
 import { SaveRecipeService } from '../../../services/saverecipe.service';
 
 @Component({
@@ -40,13 +39,7 @@ export class AddReceipeDialogComponent implements OnInit {
 
   constructor(private recipeService: SaveRecipeService) {}
 
-  ngOnInit(): void {
-    this.loadRecipe(1);
-  }
-
-  loadRecipe(recipeId: number): void {
-    this.recipe = recipes.find((r) => r.recipeId === recipeId);
-  }
+  ngOnInit(): void {}
 
   addRecipe(recipe: Recipe): void {
     this.recipeService.saveRecipe(recipe).subscribe(

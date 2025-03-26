@@ -27,6 +27,30 @@ app.get("/recipes", (req, res) => {
   });
 });
 
+app.get("/recipes/:id", (req, res) => {
+  const recipeId = parseInt(req.params.id);
+
+  const filePath = path.join(__dirname, "data", "recipes.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      return res.status(500).json({ message: "Error reading file" });
+    }
+
+    let recipes = [];
+    if (data) {
+      recipes = JSON.parse(data);
+    }
+
+    const recipe = recipes.find((r) => r.recipeId === recipeId);
+
+    if (!recipe) {
+      return res.status(404).json({ message: "Recipe not found." });
+    }
+    res.status(200).json(recipe);
+  });
+});
+
 app.post("/save-recipe", (req, res) => {
   const recipe = req.body;
   const filePath = path.join(__dirname, "data", "recipes.json");

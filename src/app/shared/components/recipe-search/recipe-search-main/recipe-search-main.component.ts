@@ -16,7 +16,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { RecipeSearchCardComponent } from '../recipe-search-card/recipe-search-card.component';
 import { Recipe, DietType } from '../../../models/recipe.models';
-import { recipes } from '../../../models/recipes';
 import { LocalStorageService } from '../../../services/local-storage.service';
 import { Router } from '@angular/router';
 import { FavoriteService } from '../../../../services/favorite.service';
@@ -95,7 +94,7 @@ export class RecipeSearchComponent implements OnInit {
       if (currentPath.includes('/favorites')) {
         sourceRecipes = this.recipes;
       } else if (currentPath.includes('/recipes')) {
-        sourceRecipes = recipes;
+        sourceRecipes = this.recipes;
       }
 
       const noDietTypeSelected =
@@ -146,7 +145,7 @@ export class RecipeSearchComponent implements OnInit {
   private getAllIngredientNames(): string[] {
     return [
       ...new Set(
-        recipes.flatMap((recipe) =>
+        this.recipes.flatMap((recipe) =>
           recipe.ingredients.map((ingredient) =>
             this.cleanIngredientName(ingredient.name)
           )

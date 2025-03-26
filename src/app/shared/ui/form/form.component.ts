@@ -7,7 +7,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { Recipe } from '../../../shared/models/recipe.models';
 import { CommonModule } from '@angular/common';
-import { recipes } from '../../../shared/models/recipes';
 
 @Component({
   selector: 'app-form',
