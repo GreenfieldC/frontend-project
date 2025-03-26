@@ -9,6 +9,24 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cors());
 
+app.get("/recipes", (req, res) => {
+  const filePath = path.join(__dirname, "data", "recipes.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading file:", err);
+      return res.status(500).json({ message: "Error reading file" });
+    }
+
+    let recipes = [];
+    if (data) {
+      recipes = JSON.parse(data);
+    }
+
+    res.status(200).json(recipes);
+  });
+});
+
 app.post("/save-recipe", (req, res) => {
   const recipe = req.body;
   const filePath = path.join(__dirname, "data", "recipes.json");
@@ -116,12 +134,12 @@ app.get("/favorites", (req, res) => {
       return res.status(500).json({ message: "Error reading file" });
     }
 
-    let recipes = [];
+    let favRecipes = [];
     if (data) {
-      recipes = JSON.parse(data);
+      favRecipes = JSON.parse(data);
     }
 
-    res.status(200).json(recipes);
+    res.status(200).json(favRecipes);
   });
 });
 

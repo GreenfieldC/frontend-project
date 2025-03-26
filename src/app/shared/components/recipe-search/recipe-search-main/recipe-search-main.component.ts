@@ -20,6 +20,7 @@ import { recipes } from '../../../models/recipes';
 import { LocalStorageService } from '../../../services/local-storage.service';
 import { Router } from '@angular/router';
 import { FavoriteService } from '../../../../services/favorite.service';
+import { RecipeService } from '../../../../services/recipe.service';
 
 @Component({
   selector: 'app-recipe-search',
@@ -48,6 +49,7 @@ export class RecipeSearchComponent implements OnInit {
     private localStorageService: LocalStorageService,
     private router: Router,
     private favoriteService: FavoriteService,
+    private recipeService: RecipeService,
     private cdr: ChangeDetectorRef
   ) {}
 
@@ -69,9 +71,11 @@ export class RecipeSearchComponent implements OnInit {
   private loadRecipesBasedOnPath(): void {
     const currentPath = this.router.url;
     if (currentPath.includes('/recipes')) {
-      this.recipes = recipes;
-      this.filteredRecipes.emit(this.recipes);
-      this.cdr.detectChanges();
+      this.recipeService.getAllRecipes().subscribe((recipes) => {
+        this.recipes = recipes;
+        this.filteredRecipes.emit(this.recipes);
+        this.cdr.detectChanges();
+      });
     } else if (currentPath.includes('/favorites')) {
       this.favoriteService.getFavorites().subscribe((data) => {
         this.recipes = data;
@@ -103,8 +107,6 @@ export class RecipeSearchComponent implements OnInit {
         this.loadRecipesBasedOnPath();
       } else {
         this.recipes = sourceRecipes.filter((recipe) => {
-
-
           const matchesDietType =
             noDietTypeSelected || value.dietTypes.includes(recipe.dietType);
           const matchesIngredients =
@@ -123,7 +125,7 @@ export class RecipeSearchComponent implements OnInit {
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       }
-      
+
       this.localStorageService.saveSelectedDietTypes(value.dietTypes);
     });
   }

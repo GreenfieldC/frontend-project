@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { recipes } from '../shared/models/recipes';
 import { Recipe } from '../shared/models/recipe.models';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
 export class RecipeService {
-  constructor() {}
+  private recipesUrl = 'http://localhost:3000/recipes';
+  constructor(private http: HttpClient) {}
 
-  getAllRecipes() {
-    return recipes;
+  getAllRecipes(): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>(this.recipesUrl);
   }
 
   getRecipeById(id: number): Recipe {
