@@ -23,7 +23,9 @@ export class RecipesOverviewComponent {
     private router: Router
   ) {}
   ngOnInit() {
-    this.allRecipes = this.recipeService.getAllRecipes();
+    this.recipeService.getAllRecipes().subscribe((recipes) => {
+      this.allRecipes = recipes;
+    });
     this.favoriteService.getFavorites().subscribe((favorite) => {
       this.favoriteRecipes = new Set(favorite.map((fav) => fav.recipeId));
     });

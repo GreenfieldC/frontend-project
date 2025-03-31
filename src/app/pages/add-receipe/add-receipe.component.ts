@@ -6,47 +6,37 @@ import {
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { FormComponent } from '../../ui/form/form.component';
-import { Recipe } from '../../models/recipe.models';
-import { recipes } from '../../models/recipes';
-import { SaveRecipeService } from '../../../services/saverecipe.service';
+import { FormComponent } from '../../shared/ui/form/form.component';
+import { Recipe } from '../../shared/models/recipe.models';
+import { SaveRecipeService } from '../../services/saverecipe.service';
 
 @Component({
-  selector: 'app-add-receipe-dialog',
+  selector: 'app-add-receipe',
   imports: [
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
     FormComponent,
   ],
   standalone: true,
-  templateUrl: './add-receipe-dialog.component.html',
-  styleUrl: './add-receipe-dialog.component.scss',
+  templateUrl: './add-receipe.component.html',
+  styleUrl: './add-receipe.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AddReceipeDialogComponent implements OnInit {
+export class AddReceipeComponent implements OnInit {
   recipe: Recipe | undefined;
   recipeList: Recipe[] = [];
-  dialog = inject(MatDialog);
 
   constructor(private recipeService: SaveRecipeService) {}
 
-  ngOnInit(): void {
-    this.loadRecipe(1);
-  }
-
-  loadRecipe(recipeId: number): void {
-    this.recipe = recipes.find((r) => r.recipeId === recipeId);
-  }
+  ngOnInit(): void {}
 
   addRecipe(recipe: Recipe): void {
     this.recipeService.saveRecipe(recipe).subscribe(
@@ -57,6 +47,5 @@ export class AddReceipeDialogComponent implements OnInit {
         alert(error.error.message);
       }
     );
-    this.dialog.closeAll();
   }
 }
