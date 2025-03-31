@@ -7,16 +7,3 @@ mat-toolbar {
   align-items: center;
   background-color: #004f4f;
 }
-
-.add-meal [mat-fab]{
-  border-radius: 8px;
-  background: rgb(0, 110, 255);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  &:hover{
-    cursor: pointer;
-    background: rgb(43, 133, 249);
-  }
-}

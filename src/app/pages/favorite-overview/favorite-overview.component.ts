@@ -5,10 +5,16 @@ import { Recipe } from '../../shared/models/recipe.models';
 import { MatIcon } from '@angular/material/icon';
 import { RecipeSearchComponent } from '../../shared/components/recipe-search/recipe-search-main/recipe-search-main.component';
 import { CommonModule, NgFor } from '@angular/common';
+import { RecipeSearchCardComponent } from '../../shared/components/recipe-search/recipe-search-card/recipe-search-card.component';
 
 @Component({
   selector: 'app-favorite-overview',
-  imports: [NgFor, CommonModule, RecipeSearchComponent, MatIcon],
+  imports: [
+    NgFor,
+    CommonModule,
+    RecipeSearchComponent,
+    RecipeSearchCardComponent,
+  ],
   templateUrl: './favorite-overview.component.html',
   styleUrl: './favorite-overview.component.scss',
 })

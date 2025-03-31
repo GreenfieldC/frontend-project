@@ -13,23 +13,13 @@
       <div>
         <mat-form-field appearance="fill">
           <mat-label>Number of persons</mat-label>
-          <input
-            matInput
-            type="number"
-            formControlName="personsNumber"
-            required
-          />
+          <input matInput type="number" formControlName="personsNumber" required />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="fill">
           <mat-label>Preparation time (minutes)</mat-label>
-          <input
-            matInput
-            type="number"
-            formControlName="preparationTime"
-            required
-          />
+          <input matInput type="number" formControlName="preparationTime" required />
         </mat-form-field>
       </div>
       <div>
@@ -43,10 +33,7 @@
         <mat-form-field appearance="fill">
           <mat-label>Category</mat-label>
           <mat-select formControlName="category" multiple>
-            <mat-option
-              *ngFor="let category of recipeCategories"
-              [value]="category"
-            >
+            <mat-option *ngFor="let category of recipeCategories" [value]="category">
               {{ category }}
             </mat-option>
           </mat-select>
@@ -69,11 +56,8 @@
       <div style="display: flex; flex-direction: column; align-items: center">
         <h3 style="color: #ffffff">Ingredient</h3>
         <div formArrayName="ingredients">
-          <div
-            style="margin-bottom: 16px; display: flex; flex-direction: column"
-            *ngFor="let ingredient of ingredients.controls; let i = index"
-            [formGroupName]="i"
-          >
+          <div style="margin-bottom: 16px; display: flex; flex-direction: column"
+            *ngFor="let ingredient of ingredients.controls; let i = index" [formGroupName]="i">
             <mat-form-field appearance="fill">
               <mat-label>Amount</mat-label>
               <input matInput formControlName="amount" type="number" required />
@@ -99,10 +83,8 @@
       <div style="display: flex; flex-direction: column; align-items: center">
         <h3 style="color: #ffffff">Step</h3>
         <div formArrayName="steps">
-          <div
-            *ngFor="let step of steps.controls; let i = index"
-            style="margin-bottom: 16px; display: flex; flex-direction: column"
-          >
+          <div *ngFor="let step of steps.controls; let i = index"
+            style="margin-bottom: 16px; display: flex; flex-direction: column">
             <mat-form-field appearance="fill">
               <mat-label>Step {{ i + 1 }}</mat-label>
               <textarea matInput [formControlName]="i" required></textarea>
@@ -117,6 +99,6 @@
     </div>
   </mat-card-content>
   <div style="width: 100%; display: flex; justify-content: center">
-    <button mat-raised-button color="primary" type="submit">Save Recipe</button>
+    <button mat-button type="submit">Save Recipe</button>
   </div>
 </form>

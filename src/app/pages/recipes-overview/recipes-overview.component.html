@@ -5,15 +5,9 @@
   </div>
   <div class="card-container">
     <ng-container *ngFor="let recipe of allRecipes">
-      <mat-card class="recipe-card" (click)="onSelectRecipe(recipe.recipeId)">
-        <img mat-card-image [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
-          alt="Bild {{recipe.title}}">
-        <mat-card-content class="recipe-info">
-          <h3>{{ recipe.title }}</h3>
-          <p>Zubereitungszeit: {{ recipe.preparationTime }} Minuten</p>
-        </mat-card-content>
-        <mat-card-actions></mat-card-actions>
-      </mat-card>
+      <recipe-search-card [recipe]="recipe" (selectCard)="onSelectRecipe(recipe.recipeId)"
+        (addFavorite)="onToggleFavorite(recipe.recipeId)" [isFavorite]="isFavorite(recipe.recipeId)">
+      </recipe-search-card>
 
     </ng-container>
   </div>

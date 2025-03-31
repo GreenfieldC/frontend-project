@@ -7,6 +7,7 @@ import { RecipeService } from '../../services/recipe.service';
 import { RecipeSearchComponent } from '../../shared/components/recipe-search/recipe-search-main/recipe-search-main.component';
 import { FavoriteService } from '../../services/favorite.service';
 import { MatCardModule } from '@angular/material/card';
+import { RecipeSearchCardComponent } from '../../shared/components/recipe-search/recipe-search-card/recipe-search-card.component';
 
 @Component({
   selector: 'app-recipes-overview',
@@ -16,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
     RecipeSearchComponent,
     MatCardModule,
     MatButtonModule,
+    RecipeSearchCardComponent,
   ],
   templateUrl: './recipes-overview.component.html',
   styleUrl: './recipes-overview.component.scss',

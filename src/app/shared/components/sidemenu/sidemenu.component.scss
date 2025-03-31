@@ -4,4 +4,9 @@
 
 mat-sidenav {
   width: 250px;
+  background-color: #004f4f !important;
+}
+
+:ng-deep.mat-drawer-inner-container {
+  background-color: #004f4f !important;
 }

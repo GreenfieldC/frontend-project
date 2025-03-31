@@ -1,10 +1,6 @@
-<div class="page-container">
-    <app-header (toggleSidemenu)="toggleSidemenu()"></app-header>
-    <app-sidemenu></app-sidemenu>
-    <div class="content-wrap">
-        <main>
-            <router-outlet></router-outlet>
-        </main>
-    </div>
-    <app-footer></app-footer>
-</div>
+<app-header (toggleSidemenu)="toggleSidemenu()"></app-header>
+<app-sidemenu></app-sidemenu>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<app-footer></app-footer>
