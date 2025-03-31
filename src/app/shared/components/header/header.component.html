@@ -3,14 +3,20 @@
     type="button"
     aria-label="Toggle sidenav"
     mat-icon-button
-    (click)="toggleSidemenu.emit()">
+    (click)="toggleSidemenu.emit()"
+  >
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>RezeptFinder</span>
 
   <span class="spacer"></span>
-
+  <div class="add-meal" *ngIf="showAddMealButton">
+    <button [routerLink]="'/add-recipe'" mat-fab extended>
+      <mat-icon>add</mat-icon>
+      Add Meal
+    </button>
+  </div>
   <button mat-icon-button (click)="toggleDarkMode()">
-    <mat-icon>{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+    <mat-icon>{{ isDarkMode ? "dark_mode" : "light_mode" }}</mat-icon>
   </button>
 </mat-toolbar>

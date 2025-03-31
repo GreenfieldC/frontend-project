@@ -3,8 +3,6 @@ import { HeaderComponent } from '../header/header.component';
 import { SidemenuComponent } from '../sidemenu/sidemenu.component';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
-import { MatDialog } from '@angular/material/dialog';
-import { AddReceipeDialogComponent } from '../add-receipe-dialog/add-receipe-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
