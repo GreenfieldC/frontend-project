@@ -12,6 +12,8 @@ export class SaveRecipeService {
   constructor(private http: HttpClient) {}
 
   saveRecipe(recipe: Recipe): Observable<any> {
+    console.log(recipe);
+
     return this.http.post(this.apiUrl, recipe);
   }
 }

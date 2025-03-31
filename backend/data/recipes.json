@@ -1,13 +1,37 @@
 [
-    {
+  {
     "title": "Spaghetti Bolognese",
     "ingredients": [
-      { "amount": 400, "unit": "g", "name": "Spaghetti" },
-      { "amount": 300, "unit": "g", "name": "Rinderhackfleisch" },
-      { "amount": 1, "unit": "Stk.", "name": "Zwiebel" },
-      { "amount": 1, "unit": "Dose", "name": "Tomaten, stückig" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Spaghetti"
+      },
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Rinderhackfleisch"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Tomaten, stückig"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -18,7 +42,9 @@
       "Soße mit Salz und Pfeffer abschmecken und mit Spaghetti servieren."
     ],
     "recipeId": 1,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Omnivore",
     "preparationTime": 30,
     "imageUrl": "assets/images/spaghetti-with-bolognese.jpg"
@@ -26,11 +52,31 @@
   {
     "title": "Rührei mit Speck",
     "ingredients": [
-      { "amount": 4, "unit": "Stk.", "name": "Eier" },
-      { "amount": 100, "unit": "g", "name": "Speck" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" },
-      { "amount": 1, "unit": "TL", "name": "Butter" }
+      {
+        "amount": 4,
+        "unit": "Stk.",
+        "name": "Eier"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "Speck"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Butter"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -40,7 +86,9 @@
       "Speck unterheben und Rührei sofort servieren."
     ],
     "recipeId": 2,
-    "category": ["Recipecategory.Breakfast"],
+    "category": [
+      "Recipecategory.Breakfast"
+    ],
     "dietType": "dietType.Omnivore",
     "preparationTime": 10,
     "imageUrl": "assets/images/scrambled-egg.jpg"
@@ -48,13 +96,41 @@
   {
     "title": "Gemüse-Lasagne",
     "ingredients": [
-      { "amount": 9, "unit": "Stk.", "name": "Lasagneblätter" },
-      { "amount": 2, "unit": "Stk.", "name": "Zucchini" },
-      { "amount": 2, "unit": "Stk.", "name": "Paprika" },
-      { "amount": 200, "unit": "g", "name": "Tomaten, passiert" },
-      { "amount": 200, "unit": "g", "name": "Käse (gerieben)" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 9,
+        "unit": "Stk.",
+        "name": "Lasagneblätter"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Zucchini"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Paprika"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Tomaten, passiert"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Käse (gerieben)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -65,7 +141,9 @@
       "Im vorgeheizten Ofen bei 180°C ca. 30 Minuten backen."
     ],
     "recipeId": 3,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Vegetarian",
     "preparationTime": 45,
     "imageUrl": "assets/images/vegetarian-lasagna.jpg"
@@ -73,11 +151,31 @@
   {
     "title": "Avocado-Toast",
     "ingredients": [
-      { "amount": 2, "unit": "Scheiben", "name": "Vollkornbrot" },
-      { "amount": 1, "unit": "Stk.", "name": "Avocado" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" },
-      { "amount": 1, "unit": "Stk.", "name": "Tomate (optional)" }
+      {
+        "amount": 2,
+        "unit": "Scheiben",
+        "name": "Vollkornbrot"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Avocado"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Tomate (optional)"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -87,7 +185,10 @@
       "Optional Tomatenscheiben darauflegen und sofort servieren."
     ],
     "recipeId": 4,
-    "category": ["Recipecategory.Breakfast", "Recipecategory.Snack"],
+    "category": [
+      "Recipecategory.Breakfast",
+      "Recipecategory.Snack"
+    ],
     "dietType": "dietType.Vegetarian",
     "preparationTime": 10,
     "imageUrl": "assets/images/avocado-toast.jpg"
@@ -95,11 +196,31 @@
   {
     "title": "Veganer Burger",
     "ingredients": [
-      { "amount": 2, "unit": "Stk.", "name": "Vegane Burger-Patties" },
-      { "amount": 2, "unit": "Stk.", "name": "Burgerbrötchen" },
-      { "amount": 4, "unit": "Blatt", "name": "Salat" },
-      { "amount": 2, "unit": "Stk.", "name": "Tomate (in Scheiben)" },
-      { "amount": 1, "unit": "EL", "name": "Vegane Mayonnaise" }
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Vegane Burger-Patties"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Burgerbrötchen"
+      },
+      {
+        "amount": 4,
+        "unit": "Blatt",
+        "name": "Salat"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Tomate (in Scheiben)"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Vegane Mayonnaise"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -110,7 +231,9 @@
       "Sofort servieren."
     ],
     "recipeId": 5,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Vegan",
     "preparationTime": 20,
     "imageUrl": "assets/images/veggie-hamburger.jpg"
@@ -118,11 +241,31 @@
   {
     "title": "Overnight Oats",
     "ingredients": [
-      { "amount": 50, "unit": "g", "name": "Haferflocken" },
-      { "amount": 100, "unit": "ml", "name": "Pflanzliche Milch (z.B. Hafermilch)" },
-      { "amount": 1, "unit": "TL", "name": "Chiasamen" },
-      { "amount": 1, "unit": "TL", "name": "Ahornsirup" },
-      { "amount": 1, "unit": "Handvoll", "name": "Beeren" }
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Haferflocken"
+      },
+      {
+        "amount": 100,
+        "unit": "ml",
+        "name": "Pflanzliche Milch (z.B. Hafermilch)"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Chiasamen"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Ahornsirup"
+      },
+      {
+        "amount": 1,
+        "unit": "Handvoll",
+        "name": "Beeren"
+      }
     ],
     "personsNumber": 1,
     "steps": [
@@ -131,7 +274,9 @@
       "Am Morgen mit Ahornsirup und frischen Beeren toppen."
     ],
     "recipeId": 6,
-    "category": ["Recipecategory.Breakfast"],
+    "category": [
+      "Recipecategory.Breakfast"
+    ],
     "dietType": "dietType.Vegan",
     "preparationTime": 5,
     "imageUrl": "assets/images/blueberries-oats.jpg"
@@ -139,11 +284,31 @@
   {
     "title": "Gegrillter Lachs mit Quinoa",
     "ingredients": [
-      { "amount": 2, "unit": "Filets", "name": "Lachs" },
-      { "amount": 150, "unit": "g", "name": "Quinoa" },
-      { "amount": 1, "unit": "Stk.", "name": "Zitrone" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 2,
+        "unit": "Filets",
+        "name": "Lachs"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Quinoa"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zitrone"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -153,7 +318,9 @@
       "Servieren: Lachs mit Quinoa anrichten."
     ],
     "recipeId": 7,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.GlutenFree",
     "preparationTime": 25,
     "imageUrl": "assets/images/salmon-quinoa.png"
@@ -161,10 +328,26 @@
   {
     "title": "Früchte-Smoothie",
     "ingredients": [
-      { "amount": 1, "unit": "Stk.", "name": "Banane" },
-      { "amount": 100, "unit": "g", "name": "Beeren (gemischt)" },
-      { "amount": 200, "unit": "ml", "name": "Orangensaft" },
-      { "amount": 1, "unit": "TL", "name": "Honig (optional)" }
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Banane"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "Beeren (gemischt)"
+      },
+      {
+        "amount": 200,
+        "unit": "ml",
+        "name": "Orangensaft"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Honig (optional)"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -173,7 +356,9 @@
       "In Gläser füllen und sofort genießen."
     ],
     "recipeId": 8,
-    "category": ["Recipecategory.Beverage"],
+    "category": [
+      "Recipecategory.Beverage"
+    ],
     "dietType": "dietType.GlutenFree",
     "preparationTime": 5,
     "imageUrl": "assets/images/smoothie.jpg"
@@ -181,11 +366,31 @@
   {
     "title": "Hähnchen mit Kokosmilch-Curry",
     "ingredients": [
-      { "amount": 300, "unit": "g", "name": "Hähnchenbrustfilet" },
-      { "amount": 1, "unit": "Dose", "name": "Kokosmilch" },
-      { "amount": 1, "unit": "Stk.", "name": "Zwiebel" },
-      { "amount": 2, "unit": "TL", "name": "Currypulver" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" }
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Hähnchenbrustfilet"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Kokosmilch"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 2,
+        "unit": "TL",
+        "name": "Currypulver"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      }
     ],
     "personsNumber": 3,
     "steps": [
@@ -195,7 +400,9 @@
       "Mit Salz abschmecken und servieren."
     ],
     "recipeId": 9,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.DairyFree",
     "preparationTime": 25,
     "imageUrl": "assets/images/chicken-curry.jpg"
@@ -203,9 +410,21 @@
   {
     "title": "Frucht-Sorbet",
     "ingredients": [
-      { "amount": 300, "unit": "g", "name": "TK-Früchte (z.B. Erdbeeren)" },
-      { "amount": 2, "unit": "EL", "name": "Zucker oder Süßungsmittel" },
-      { "amount": 2, "unit": "EL", "name": "Wasser" }
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "TK-Früchte (z.B. Erdbeeren)"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Zucker oder Süßungsmittel"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Wasser"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -214,7 +433,9 @@
       "Alle 30 Minuten umrühren, bis die gewünschte Konsistenz erreicht ist."
     ],
     "recipeId": 10,
-    "category": ["Recipecategory.Dessert"],
+    "category": [
+      "Recipecategory.Dessert"
+    ],
     "dietType": "dietType.DairyFree",
     "preparationTime": 10,
     "imageUrl": "assets/images/sorbet.jpg"
@@ -222,11 +443,31 @@
   {
     "title": "Steak mit Kartoffeln",
     "ingredients": [
-      { "amount": 2, "unit": "Stk.", "name": "Rindersteak" },
-      { "amount": 500, "unit": "g", "name": "Kartoffeln" },
-      { "amount": 1, "unit": "EL", "name": "Öl" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Rindersteak"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Kartoffeln"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Öl"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -235,7 +476,9 @@
       "Kartoffeln abgießen und zusammen mit Steak servieren."
     ],
     "recipeId": 11,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.NutFree",
     "preparationTime": 25,
     "imageUrl": "assets/images/beef-with-potatos.jpg"
@@ -243,12 +486,36 @@
   {
     "title": "Tomaten-Gurken-Salat",
     "ingredients": [
-      { "amount": 2, "unit": "Stk.", "name": "Tomaten" },
-      { "amount": 1, "unit": "Stk.", "name": "Gurke" },
-      { "amount": 1, "unit": "EL", "name": "Essig" },
-      { "amount": 1, "unit": "EL", "name": "Öl" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Tomaten"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Gurke"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Essig"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Öl"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -257,7 +524,9 @@
       "Salat mit Dressing vermischen und direkt servieren."
     ],
     "recipeId": 12,
-    "category": ["Recipecategory.SideDish"],
+    "category": [
+      "Recipecategory.SideDish"
+    ],
     "dietType": "dietType.NutFree",
     "preparationTime": 10,
     "imageUrl": "assets/images/tomato-salad.jpg"
@@ -265,10 +534,26 @@
   {
     "title": "Zoodles mit Pesto",
     "ingredients": [
-      { "amount": 2, "unit": "Stk.", "name": "Zucchini" },
-      { "amount": 2, "unit": "EL", "name": "Pesto (ohne Käse, z.B. Paleo-Pesto)" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Zucchini"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Pesto (ohne Käse, z.B. Paleo-Pesto)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -278,7 +563,9 @@
       "Sofort servieren."
     ],
     "recipeId": 13,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Paleo",
     "preparationTime": 15,
     "imageUrl": "assets/images/zoodles.webp"
@@ -286,10 +573,26 @@
   {
     "title": "Obstsalat",
     "ingredients": [
-      { "amount": 1, "unit": "Stk.", "name": "Apfel" },
-      { "amount": 1, "unit": "Stk.", "name": "Banane" },
-      { "amount": 1, "unit": "Stk.", "name": "Birne" },
-      { "amount": 1, "unit": "Handvoll", "name": "Beeren" }
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Apfel"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Banane"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Birne"
+      },
+      {
+        "amount": 1,
+        "unit": "Handvoll",
+        "name": "Beeren"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -298,7 +601,9 @@
       "Optional mit etwas Zitronensaft beträufeln, sofort servieren."
     ],
     "recipeId": 14,
-    "category": ["Recipecategory.Dessert"],
+    "category": [
+      "Recipecategory.Dessert"
+    ],
     "dietType": "dietType.Paleo",
     "preparationTime": 10,
     "imageUrl": "assets/images/fruit-salad.jpg"
@@ -306,11 +611,31 @@
   {
     "title": "Keto-Hähnchen-Auflauf",
     "ingredients": [
-      { "amount": 300, "unit": "g", "name": "Hähnchenbrustfilet" },
-      { "amount": 200, "unit": "g", "name": "Brokkoli" },
-      { "amount": 100, "unit": "g", "name": "Käse (gerieben, z.B. Gouda)" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Hähnchenbrustfilet"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Brokkoli"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "Käse (gerieben, z.B. Gouda)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 3,
     "steps": [
@@ -320,7 +645,9 @@
       "Bei 180°C ca. 20-25 Minuten backen, bis der Käse goldbraun ist."
     ],
     "recipeId": 15,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Keto",
     "preparationTime": 30,
     "imageUrl": "assets/images/chicken-casserole.jpg"
@@ -328,11 +655,31 @@
   {
     "title": "Gurkenboote mit Thunfisch",
     "ingredients": [
-      { "amount": 1, "unit": "Stk.", "name": "Gurke" },
-      { "amount": 1, "unit": "Dose", "name": "Thunfisch (in Wasser)" },
-      { "amount": 1, "unit": "EL", "name": "Mayonnaise" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Gurke"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Thunfisch (in Wasser)"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Mayonnaise"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -341,7 +688,9 @@
       "Thunfischmasse in die Gurkenhälften füllen und direkt servieren."
     ],
     "recipeId": 16,
-    "category": ["Recipecategory.Snack"],
+    "category": [
+      "Recipecategory.Snack"
+    ],
     "dietType": "dietType.Keto",
     "preparationTime": 10,
     "imageUrl": "assets/images/cucumber-tuna.webp"
@@ -349,12 +698,36 @@
   {
     "title": "Hähnchen-Kabsa (Halal)",
     "ingredients": [
-      { "amount": 500, "unit": "g", "name": "Hähnchenteile (z.B. Keulen, Brust)" },
-      { "amount": 2, "unit": "Stk.", "name": "Zwiebeln" },
-      { "amount": 300, "unit": "g", "name": "Reis (Langkorn)" },
-      { "amount": 1, "unit": "Dose", "name": "Tomaten, passiert" },
-      { "amount": 1, "unit": "TL", "name": "Kabsa-Gewürz (oder Ras el Hanout)" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" }
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Hähnchenteile (z.B. Keulen, Brust)"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Zwiebeln"
+      },
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Reis (Langkorn)"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Tomaten, passiert"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Kabsa-Gewürz (oder Ras el Hanout)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -364,7 +737,9 @@
       "Bei niedriger Hitze köcheln lassen, bis Reis und Hähnchen gar sind."
     ],
     "recipeId": 17,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Halal",
     "preparationTime": 40,
     "imageUrl": "assets/images/chicken-kabsa.webp"
@@ -372,12 +747,36 @@
   {
     "title": "Shakshuka (Halal)",
     "ingredients": [
-      { "amount": 1, "unit": "Stk.", "name": "Zwiebel" },
-      { "amount": 1, "unit": "Stk.", "name": "Paprika" },
-      { "amount": 1, "unit": "Dose", "name": "Tomaten, gehackt" },
-      { "amount": 2, "unit": "Stk.", "name": "Eier" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" },
-      { "amount": 1, "unit": "Prise", "name": "Pfeffer" }
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Paprika"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Tomaten, gehackt"
+      },
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Eier"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -388,7 +787,9 @@
       "Deckel auflegen und die Eier stocken lassen."
     ],
     "recipeId": 18,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Halal",
     "preparationTime": 20,
     "imageUrl": "assets/images/shakshuka.jpg"
@@ -396,11 +797,31 @@
   {
     "title": "Gefilte Fisch (Koscher)",
     "ingredients": [
-      { "amount": 400, "unit": "g", "name": "Fischfilet (z.B. Karpfen)" },
-      { "amount": 1, "unit": "Stk.", "name": "Zwiebel" },
-      { "amount": 1, "unit": "Stk.", "name": "Ei" },
-      { "amount": 2, "unit": "EL", "name": "Paniermehl (koscher zertifiziert)" },
-      { "amount": 1, "unit": "Prise", "name": "Salz" }
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Fischfilet (z.B. Karpfen)"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Ei"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Paniermehl (koscher zertifiziert)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      }
     ],
     "personsNumber": 4,
     "steps": [
@@ -410,7 +831,9 @@
       "Warm oder kalt servieren."
     ],
     "recipeId": 19,
-    "category": ["Recipecategory.MainCourse"],
+    "category": [
+      "Recipecategory.MainCourse"
+    ],
     "dietType": "dietType.Kosher",
     "preparationTime": 30,
     "imageUrl": "assets/images/gefilte-fisch.jpg"
@@ -418,11 +841,31 @@
   {
     "title": "Bagels mit Lachs und Frischkäse (Koscher)",
     "ingredients": [
-      { "amount": 2, "unit": "Stk.", "name": "Bagels (koscher zertifiziert)" },
-      { "amount": 100, "unit": "g", "name": "Räucherlachs" },
-      { "amount": 50, "unit": "g", "name": "Frischkäse" },
-      { "amount": 1, "unit": "Stk.", "name": "Zwiebel (in Ringen)" },
-      { "amount": 2, "unit": "Blatt", "name": "Salat" }
+      {
+        "amount": 2,
+        "unit": "Stk.",
+        "name": "Bagels (koscher zertifiziert)"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "Räucherlachs"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Frischkäse"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk.",
+        "name": "Zwiebel (in Ringen)"
+      },
+      {
+        "amount": 2,
+        "unit": "Blatt",
+        "name": "Salat"
+      }
     ],
     "personsNumber": 2,
     "steps": [
@@ -432,9 +875,94 @@
       "Zusammenklappen und sofort servieren."
     ],
     "recipeId": 20,
-    "category": ["Recipecategory.Breakfast"],
+    "category": [
+      "Recipecategory.Breakfast"
+    ],
     "dietType": "dietType.Kosher",
     "preparationTime": 10,
     "imageUrl": "assets/images/breakfast-bagel.jpg"
+  },
+  {
+    "title": "Klassische Lasagne",
+    "personsNumber": 6,
+    "preparationTime": 60,
+    "imageUrl": "assets/images/lasagne.jpg",
+    "category": [
+      "Hauptgericht"
+    ],
+    "dietType": "Vollkost",
+    "ingredients": [
+      {
+        "amount": 12,
+        "unit": "Stk",
+        "name": "Lasagneblätter"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Hackfleisch (gemischt)"
+      },
+      {
+        "amount": 1,
+        "unit": "Stk",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 2,
+        "unit": "Zehen",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 1,
+        "unit": "Dose",
+        "name": "Tomaten, passiert"
+      },
+      {
+        "amount": 200,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Butter"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Käse (gerieben, z.B. Gouda)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Muskatnuss"
+      }
+    ],
+    "steps": [
+      "Zwiebel und Knoblauch fein hacken und in einer Pfanne anbraten.",
+      "Hackfleisch hinzufügen und krümelig braten.",
+      "Passierte Tomaten hinzufügen, mit Salz und Pfeffer würzen und ca. 15 Minuten köcheln lassen.",
+      "Für die Béchamelsauce Butter in einem Topf schmelzen, Mehl einrühren und kurz anschwitzen.",
+      "Milch langsam unter Rühren hinzufügen, mit Salz, Pfeffer und Muskatnuss würzen und kurz aufkochen lassen.",
+      "Eine Auflaufform einfetten und abwechselnd Lasagneblätter, Hackfleischsoße und Béchamelsauce schichten.",
+      "Mit einer Schicht Béchamelsauce abschließen und geriebenen Käse darüberstreuen.",
+      "Im vorgeheizten Ofen bei 180°C (Ober-/Unterhitze) ca. 40 Minuten backen, bis der Käse goldbraun ist."
+    ],
+    "recipeId": 21
   }
 ]

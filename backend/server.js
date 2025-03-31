@@ -65,12 +65,19 @@ app.post("/save-recipe", (req, res) => {
       recipes = JSON.parse(data);
     }
 
-    const recipeExists = recipes.find((r) => r.id === recipe.id);
+    const recipeExists = recipes.find((r) => r.title === recipe.title);
     if (recipeExists) {
       return res.status(400).json({ message: "Recipe already exists" });
     }
 
+    const maxId = recipes.reduce(
+      (max, r) => (r.recipeId > max ? r.recipeId : max),
+      0
+    );
+    recipe.recipeId = maxId + 1;
+
     recipes.push(recipe);
+    console.log("recipes", recipes);
 
     fs.writeFile(filePath, JSON.stringify(recipes, null, 2), (err) => {
       if (err) {

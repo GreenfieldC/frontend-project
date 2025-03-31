@@ -53,9 +53,10 @@ export class RecipeSearchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.loadRecipesBasedOnPath();
     this.initForm();
     this.getAllIngredientNames();
-    this.setAllIngredients();
+
     this.filterRecipesOnFormChange();
     this.patchFormValue();
   }
@@ -72,12 +73,14 @@ export class RecipeSearchComponent implements OnInit {
     if (currentPath.includes('/recipes')) {
       this.recipeService.getAllRecipes().subscribe((recipes) => {
         this.recipes = recipes;
+        this.setAllIngredients();
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       });
     } else if (currentPath.includes('/favorites')) {
       this.favoriteService.getFavorites().subscribe((data) => {
         this.recipes = data;
+        this.setAllIngredients();
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       });

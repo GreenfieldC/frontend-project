@@ -10,8 +10,8 @@
   <span>RezeptFinder</span>
 
   <span class="spacer"></span>
-  <div class="add-meal">
-    <button mat-fab extended>
+  <div class="add-meal" *ngIf="showAddMealButton">
+    <button [routerLink]="'/add-recipe'" mat-fab extended>
       <mat-icon>add</mat-icon>
       Add Meal
     </button>
