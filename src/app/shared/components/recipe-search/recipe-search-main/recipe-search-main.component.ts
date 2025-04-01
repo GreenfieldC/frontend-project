@@ -56,7 +56,6 @@ export class RecipeSearchComponent implements OnInit {
     this.loadRecipesBasedOnPath();
     this.initForm();
     this.getAllIngredientNames();
-
     this.filterRecipesOnFormChange();
     this.patchFormValue();
   }
