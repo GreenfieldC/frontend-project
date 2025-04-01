@@ -14,9 +14,8 @@ import {
 } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { RecipeSearchCardComponent } from '../recipe-search-card/recipe-search-card.component';
 import { Recipe, DietType } from '../../../models/recipe.models';
-import { LocalStorageService } from '../../../services/local-storage.service';
+import { LocalStorageService } from '../../../../services/local-storage.service';
 import { Router } from '@angular/router';
 import { FavoriteService } from '../../../../services/favorite.service';
 import { RecipeService } from '../../../../services/recipe.service';

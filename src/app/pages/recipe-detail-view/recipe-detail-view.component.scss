@@ -2,35 +2,116 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 40px;
+  margin: 0 40px;
+  padding-top: 15px;
+
+  ::ng-deep.mat-mdc-text-field-wrapper {
+    border-radius: 0 !important;
+    margin-top: 20px;
+    padding-left: 22px;
+  }
 }
 
 button {
-  width: 250px;
-  height: 40px;
-  background-color: black;
-  color: white;
-  margin-bottom: 30px;
-  border-radius: 5px;
+  max-width: 150px;
+  background-color: #405757 !important;
+  color: white !important;
+  box-shadow: none;
+  z-index: 0 !important;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.5);
+  }
+
+  &.back-button {
+    margin-bottom: 20px;
+  }
 }
 
 .recipe-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: transparent;
   margin-bottom: 100px;
-  overflow-y: auto;
-  align-items: center;
-  img {
+  padding: 25px;
+
+  mat-card-header {
+    padding-left: 0;
+  }
+
+  mat-card-content {
+    padding-left: 0;
+  }
+
+  mat-card-title {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
     max-width: 650px;
-    max-height: 550px;
-    object-fit: cover;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 5px;
+    line-height: 2;
+
+    li {
+      padding-left: 15px;
+    }
+  }
+
+  ol {
+    line-height: 2;
+    min-height: 150px;
+    padding-left: 20px;
+  }
+
+  img {
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 0;
   }
 
   .recipe-info {
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    .ingredients:nth-child(even) {
+      background-color: #40575742;
+      min-width: 50px;
+    }
+  }
+
+  .amount-button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .amount-button {
+      display: flex;
+      align-items: center;
+
+      button {
+        z-index: 0 !important;
+
+        &.left {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &.right {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    @media (max-width: 599px) {
+      flex-direction: column;
+    }
+  }
+
+  mat-form-field {
+    width: 60px;
   }
 }

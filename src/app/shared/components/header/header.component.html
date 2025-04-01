@@ -1,17 +1,12 @@
 <mat-toolbar color="primary">
-  <button
-    type="button"
-    aria-label="Toggle sidenav"
-    mat-icon-button
-    (click)="toggleSidemenu.emit()"
-  >
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSidemenu.emit()">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>RezeptFinder</span>
 
   <span class="spacer"></span>
-  <div class="add-meal" *ngIf="showAddMealButton">
-    <button [routerLink]="'/add-recipe'" mat-fab extended>
+  <div *ngIf="showAddMealButton">
+    <button [routerLink]="'/add-recipe'" mat-flat-button>
       <mat-icon>add</mat-icon>
       Add Meal
     </button>

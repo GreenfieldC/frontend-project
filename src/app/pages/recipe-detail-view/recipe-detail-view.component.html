@@ -1,19 +1,36 @@
-<button mat-flat-button (click)="goBack()">zurück</button>
-<div class="recipe-container" *ngIf="recipe">
-    <img [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
+<button mat-flat-button class="back-button" (click)="goBack()">zurück</button>
+<mat-card class="recipe-container" *ngIf="recipe">
+    <img mat-card-image [src]="recipe.imageUrl ? recipe.imageUrl : 'assets/images/placeholder-image.jpg'"
         alt="Bild {{recipe.title}}" />
-    <div class="recipe-info">
-        <h1>{{ recipe.title }}</h1>
+    <mat-card-header>
+        <mat-card-title>{{ recipe.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="recipe-info">
+
         <p>Zubereitungszeit: {{ recipe.preparationTime }} Minuten</p>
-        <p>Zutaten:</p>
+        <div class="amount-button-container">
+            <span>Zutaten für</span>
+            <div class="amount-button">
+                <button mat-fab class="left" (click)="decreaseAmount()">
+                    <mat-icon>remove</mat-icon></button>
+                <mat-form-field>
+                    <input matInput type="number" [(ngModel)]="personsNumber">
+                </mat-form-field>
+                <button mat-fab class="right" (click)="increaseAmount()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+            <span>Personen</span>
+        </div>
+
         <ul>
-            <li *ngFor="let ingredient of recipe.ingredients">
-                {{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.name }}</li>
+            <li *ngFor="let ingredient of recipe.ingredients" class="ingredients">
+                {{ getCalculatedAmount(ingredient.amount) }} {{ ingredient.unit }} {{ ingredient.name }}</li>
         </ul>
         <p>Zubereitung:</p>
         <ol>
             <li *ngFor="let step of recipe.steps">{{step}}</li>
         </ol>
 
-    </div>
-</div>
+    </mat-card-content>
+</mat-card>

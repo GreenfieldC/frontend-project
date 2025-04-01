@@ -1,7 +1,12 @@
-.sidenav-container {
-  height: 100vh;
-}
+// .sidenav-container {
+//   height: 100vh;
+// }
 
 mat-sidenav {
   width: 250px;
+  background-color: #004f4f !important;
+}
+
+:ng-deep.mat-drawer-inner-container {
+  background-color: #004f4f !important;
 }

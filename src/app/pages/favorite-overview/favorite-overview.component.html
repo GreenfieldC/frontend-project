@@ -1,44 +1,14 @@
 <section>
   <div class="heading-search-container">
     <h1>Rezeptbibliothek</h1>
-    <app-recipe-search
-      [recipes]="allRecipes"
-      (filteredRecipes)="setFilteredRecipes($event)"
-    ></app-recipe-search>
+    <app-recipe-search [recipes]="allRecipes" (filteredRecipes)="setFilteredRecipes($event)"></app-recipe-search>
   </div>
   <div class="card-container">
     <ng-container *ngIf="allRecipes.length > 0; else noRecipes">
       <ng-container *ngFor="let recipe of allRecipes">
-        <div class="recipe-card" (click)="onSelectRecipe(recipe.recipeId)">
-          <img
-            [src]="
-              recipe.imageUrl
-                ? recipe.imageUrl
-                : 'assets/images/placeholder-image.jpg'
-            "
-            alt="Bild {{ recipe.title }}"
-          />
-          <div class="recipe-info">
-            <h3>{{ recipe.title }}</h3>
-            <p>Zubereitungszeit: {{ recipe.preparationTime }} Minuten</p>
-          </div>
-          <div class="favorite-container">
-            <mat-icon
-              style="color: rgb(0, 110, 255); font-size: 36px"
-              [ngClass]="{
-                'favorite-filled': isFavorite(recipe.recipeId),
-                'favorite-outlined': !isFavorite(recipe.recipeId)
-              }"
-              (click)="
-                onToggleFavorite(recipe.recipeId); $event.stopPropagation()
-              "
-            >
-              {{
-                isFavorite(recipe.recipeId) ? "favorite" : "favorite_border"
-              }}</mat-icon
-            >
-          </div>
-        </div>
+        <recipe-search-card [recipe]="recipe" (selectCard)="onSelectRecipe(recipe.recipeId)"
+          (addFavorite)="onToggleFavorite(recipe.recipeId)" [isFavorite]="isFavorite(recipe.recipeId)">
+        </recipe-search-card>
       </ng-container>
     </ng-container>
     <ng-template #noRecipes>

@@ -10,9 +10,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { FormComponent } from '../../shared/ui/form/form.component';
+import { FormComponent } from '../../shared/components/form/form.component';
 import { Recipe } from '../../shared/models/recipe.models';
 import { SaveRecipeService } from '../../services/saverecipe.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-receipe',
@@ -24,6 +25,7 @@ import { SaveRecipeService } from '../../services/saverecipe.service';
     MatSelectModule,
     MatInputModule,
     FormComponent,
+    RouterLink,
   ],
   standalone: true,
   templateUrl: './add-receipe.component.html',

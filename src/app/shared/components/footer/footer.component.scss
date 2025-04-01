@@ -1,6 +1,7 @@
 :host {
   display: block;
   width: 100%;
+  text-align: center;
   margin-top: auto; // <- wichtig für Flex-Verhalten!
 }
 
@@ -9,6 +10,7 @@
   justify-content: center;
   font-size: 15px;
   padding: 1rem 0;
+  background-color: #004f4f;
 
   a {
     color: inherit;
