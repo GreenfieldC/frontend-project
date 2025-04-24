@@ -76,11 +76,8 @@ export class RecipeSearchComponent implements OnInit {
         this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       });
-    } else if (currentPath.includes('/favorites')) {
-      this.favoriteService.getFavorites().subscribe((data) => {
-        this.recipes = data;
-        this.setAllIngredients();
-        this.filteredRecipes.emit(this.recipes);
+    } else if (currentPath.includes('/favorites')) {  this.favorit
+      eService.getFavorites().subscribe((data) => {    this.recipes = data;    this.setAllIngredients();  this.filteredRecipes.emit(this.recipes);
         this.cdr.detectChanges();
       });
     }
