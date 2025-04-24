@@ -1,1 +1,29 @@
-name: Lint Code Base
+name: Super Linter
+
+on:
+  pull_request:
+    branches: [ main ] # oder dein Ziel-Branch
+
+jobs:
+  lint:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: .github/linters
+          VALIDATE_TYPESCRIPT_ES: true
+          VALIDATE_HTML: true
+          VALIDATE_JSON: true
+          VALIDATE_YAML: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_EDITORCONFIG: true
+          VALIDATE_PRETTIER: true
